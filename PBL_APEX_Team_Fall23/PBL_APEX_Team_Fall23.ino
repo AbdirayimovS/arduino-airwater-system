@@ -1,3 +1,5 @@
+#include <LiquidCrystal.h>
+
 #include <SoftwareSerial.h> // Esp library
 #include <LiquidCrystal_I2C.h> //LCD Library
 #include <DHT.h> //Library from AdaFruit for DHT11 Temp and Hum Sensor
@@ -159,7 +161,7 @@ void setup(){
 
   while(check_connection==0){
     Serial.print("..");
-    ser.print("AT+CWJAP=\"4Lab\",\"\"\r\n"); // use 4LAB SSID and password ""
+    ser.print("AT+CWJAP=\"Galaxy Note20 5G 6006\",\"24292429\"\r\n"); // use 4LAB SSID and password ""
     ser.setTimeout(5000);
     if(ser.find("WIFI CONNECTED\r\n")==1 ){
       Serial.println("WIFI CONNECTED");
